@@ -1,0 +1,314 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 10%;
+    background:#000;
+    border-bottom:2px solid #ff2e63;
+}
+
+.logo{
+    color:#ff2e63;
+}
+
+/* MENU ICON RIGHT */
+.menu-icon{
+    margin-left:auto;
+    font-size:26px;
+    color:#ff2e63;
+    cursor:pointer;
+    display:none;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle,
+#drop-toggle{
+    display:none;
+}
+
+/* NAV LINKS */
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li{
+    margin-left:25px;
+    position:relative;
+}
+
+.nav-links a,
+.drop-label{
+    text-decoration:none;
+    color:white;
+    cursor:pointer;
+}
+
+/* DROPDOWN FIX */
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:35px;
+    right:0;
+    background:#111;
+    padding:10px 15px;
+    border-radius:10px;
+    border:1px solid #ff2e63;
+    min-width:160px;
+}
+
+.dropdown-menu li{
+    margin:8px 0;
+}
+
+.dropdown-menu a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:5px;
+    transition:0.3s;
+}
+
+.dropdown-menu a:hover{
+    background:#ff2e63;
+    color:black;
+    border-radius:5px;
+}
+
+#drop-toggle:checked + .drop-label + .dropdown-menu{
+    display:block;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:60px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    border:1px solid #ff2e63;
+    color:white;
+    text-decoration:none;
+}
+
+/* GLASS SECTIONS */
+.glass{
+    background:#111;
+    border:1px solid #ff2e63;
+    border-radius:15px;
+    padding:30px;
+    margin:40px auto;
+    width:80%;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1a1a1a;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* CONTACT FIX */
+.contact-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-info{
+    flex:1;
+    min-width:280px;
+}
+
+.contact-form{
+    flex:1;
+    min-width:280px;
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    background:#1a1a1a;
+    border:1px solid #333;
+    color:white;
+    border-radius:8px;
+}
+
+.contact-form button{
+    margin-top:10px;
+    padding:12px;
+    background:#ff2e63;
+    border:none;
+    color:white;
+    border-radius:8px;
+}
+
+.socials{
+    margin-top:15px;
+}
+
+.socials a{
+    display:inline-block;
+    margin:5px;
+    padding:10px 15px;
+    border:1px solid #ff2e63;
+    text-decoration:none;
+    color:white;
+}
+
+/* CERTIFICATIONS */
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:25px;
+}
+
+.cert-card{
+    background:#1a1a1a;
+    border:1px solid #ff2e63;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.cert-card:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 15px #ff2e63;
+}
+
+.cert-card img{
+    width:100%;
+    height:200px;
+    object-fit:contain;
+    background:#000;
+    border-radius:8px;
+}
+
+/* LANGUAGES */
+.language-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:20px;
+}
+
+.language-card{
+    background:#1a1a1a;
+    border:1px solid #ff2e63;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+}
+
+.language-card audio{
+    width:100%;
+}
+
+/* HOBBIES CLICK VIDEO */
+.hobby-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}
+
+.hobby-card{
+    background:#1a1a1a;
+    border:1px solid #ff2e63;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+}
+
+.hobby-card input{
+    display:none;
+}
+
+.hobby-card label{
+    display:block;
+    padding:10px;
+    background:#ff2e63;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    margin-bottom:10px;
+}
+
+.video-box{
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.hobby-card input:checked + label + .video-box{
+    max-height:300px;
+}
+
+.video-box video{
+    width:100%;
+    border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .menu-icon{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        right:0;
+        background:#111;
+        padding:20px;
+        width:200px;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links{
+        display:flex;
+    }
+
+    .dropdown-menu{
+        position:static;
+    }
+}
