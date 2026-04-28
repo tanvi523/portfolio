@@ -1,294 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tanvi | Portfolio</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tanvi Patil | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
 
-<a id="top"></a>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <h2 class="logo">GREETINGS, WELCOME TO MY PORTFOLIO</h2>
-
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-
-        <li class="dropdown">
-            <input type="checkbox" id="drop-toggle">
-            <label for="drop-toggle" class="drop-label">Explore ▾</label>
-
-            <ul class="dropdown-menu">
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-
-<!-- HEADER -->
-<header>
-    <h1>Tanvi Patil</h1>
-    <p>Cloud Computing Enthusiast | AI Explorer</p>
-   
-</header>
-
-<!-- ABOUT -->
-<section class="glass">
-    <h2>About Me</h2>
-    <p>
-        I am a passionate Computer Science student with a strong interest in Cloud Computing, Artificial Intelligence, 
-        and building scalable real-world applications. I enjoy exploring new technologies and continuously improving 
-        my problem-solving skills.
-    </p>
-    <p>
-        I am currently focusing on strengthening my fundamentals in programming, cloud platforms, and system design. 
-        I believe in consistency, discipline, and practical learning to become industry-ready.
-    </p>
-</section>
-
-<!-- EDUCATION -->
-<section class="glass">
-    <h2>Education</h2>
-
-    <table border="1" width="100%">
-        <tr>
-            <th>Year</th>
-            <th>Qualification</th>
-            <th>Institute</th>
-            <th>Score</th>
-        </tr>
-
-        <tr>
-            <td>2022</td>
-            <td>10th</td>
-            <td>Godavari English Medium School</td>
-            <td>98.6%</td>
-        </tr>
-
-        <tr>
-            <td>2024</td>
-            <td>12th</td>
-            <td>Godavari English Medium School</td>
-            <td>81.8%</td>
-        </tr>
-
-        <tr>
-            <td>2024 - Present</td>
-            <td>BTech CSE (Software)</td>
-            <td>MIT AOE</td>
-            <td>CGPA: 9</td>
-        </tr>
-    </table>
-</section>
-
-<!-- SKILLS -->
-<section class="glass">
-    <h2>Skills</h2>
-
-    <p>HTML/CSS</p>
-    <progress value="65" max="100"></progress>
-    <p>c++</p>
-    <progress value="65" max="100"></progress>
-      <p>c</p>
-    <progress value="85" max="100"></progress>
-
-    <p>Python</p>
-    <progress value="75" max="100"></progress>
-
-     <p>AWS</p>
-    <progress value="95" max="100"></progress>
-</section>
-
-<!-- PROJECTS -->
-<section class="glass" id="projects">
-    <h2>Projects</h2>
-
-    <div class="projects">
-        <div class="card">
-            <h3>Fraud Detection</h3>
-            <p>Machine learning model.</p>
+    <section class="hero">
+        <div class="profile-ring">
+            <img src="me.jpeg" alt="Tanvi Patil" class="profile-pic" onclick="openFull(this.src, 'img')">
         </div>
+        <h1 class="hero-name">TANVI PATIL</h1>
+        <div class="nav-buttons">
+            <button class="nav-btn active" onclick="showSection('education')">Education</button>
+            <button class="nav-btn" onclick="showSection('achievements')">Achievements</button>
+            <button class="nav-btn" onclick="showSection('skills')">Skills</button>
+            <button class="nav-btn" onclick="showSection('projects')">Projects</button>
+            <button class="nav-btn" onclick="showSection('hobbies')">Hobbies</button>
+            <button class="nav-btn" onclick="showSection('languages')">Languages</button>
+            <button class="nav-btn" onclick="showSection('certifications')">Certifications</button>
+        </div>
+    </section>
 
-        <div class="card">
-            <h3>Crowd Predictor</h3>
-            <p>AI-based system.</p>
-        </div>
-        <div class="card">
-            <h3>image steganography</h3>
-            <p>detect hidden data from images</p>
-        </div>
+    <main class="content-wrapper">
+        <section id="education" class="section active-section">
+            <h2 class="section-heading">Education</h2>
+            <table class="edu-table">
+                <thead><tr><th>Year</th><th>Qualification</th><th>Institute</th><th>Score</th></tr></thead>
+                <tbody>
+                    <tr><td>2022</td><td>10th</td><td>Godavari English Medium School</td><td>98.6%</td></tr>
+                    <tr><td>2024</td><td>12th</td><td>Godavari English Medium School</td><td>81.8%</td></tr>
+                    <tr><td>2025–Present</td><td>BTech CSE</td><td>MIT AOE</td><td>CGPA: 9</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="achievements" class="section">
+            <h2 class="section-heading">Achievements</h2>
+            <div class="grid">
+                <div class="card"><img src="nda1.jpeg" onclick="openFull(this.src, 'img')"><h4>Cleared NDA 150, 151, 154, 155</h4></div>
+                <div class="card"><img src="ssb.jpeg" onclick="openFull(this.src, 'img')"><h4>AFSB Conference Out (3 Selections)</h4></div>
+                <div class="card"><img src="ssb2.png" onclick="openFull(this.src, 'img')"><h4>Army Board Screened Out</h4></div>
+                <div class="card"><img src="parade.jpeg" onclick="openFull(this.src, 'img')"><h4>Parade Commanding</h4></div>
+                <div class="card"><img src="poster.jpeg" onclick="openFull(this.src, 'img')"><h4>Poster Competition Winner</h4></div>
+                <div class="card"><img src="1.jpeg" onclick="openFull(this.src, 'img')"><h4>1st Runner Up</h4></div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-heading">Skills</h2>
+            <div class="grid">
+                <div class="card"><h4>Python</h4></div>
+                <div class="card"><h4>C / C++</h4></div>
+                <div class="card"><h4>HTML / CSS</h4></div>
+                <div class="card"><h4>AWS Cloud</h4></div>
+                <div class="card"><h4>JavaScript</h4></div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-heading">Projects</h2>
+            <div class="grid">
+                <div class="card"><h3>LetsSwap</h3><p>Skills: HTML, CSS, JS</p><a href="https://github.com/tanvi523/letswap" target="_blank">View on GitHub</a></div>
+                <div class="card"><h3>Amazon Clone</h3><p>Skills: HTML, CSS, JS</p><a href="https://github.com/tanvi523/amazoneclone" target="_blank">View on GitHub</a></div>
+                <div class="card"><h3>Image Steganography</h3><p>Skills: Python, PIL</p><a href="https://github.com/tanvi523" target="_blank">View on GitHub</a></div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="section">
+            <h2 class="section-heading">Hobbies</h2>
+            <div class="grid">
+                <div class="card" onclick="openFull('dance.mp4', 'vid')"><h3>Dancing</h3><p>(Click to view video)</p></div>
+                <div class="card"><h3>Trekking</h3></div>
+                <div class="card"><h3>Gardening</h3></div>
+                <div class="card"><h3>Reading Books</h3></div>
+            </div>
+        </section>
+
+        <section id="languages" class="section">
+            <h2 class="section-heading">Languages</h2>
+            <div class="grid">
+                <div class="card"><div class="audio-container"><h3>Marathi</h3><audio controls><source src="marathi.mp3" type="audio/mpeg"></audio></div></div>
+                <div class="card"><div class="audio-container"><h3>Hindi</h3><audio controls><source src="hindi.mp3" type="audio/mpeg"></audio></div></div>
+                <div class="card"><div class="audio-container"><h3>English</h3><audio controls><source src="english.mp3" type="audio/mpeg"></audio></div></div>
+                <div class="card"><div class="audio-container"><h3>German</h3><audio controls><source src="german.mp3" type="audio/mpeg"></audio></div></div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <h2 class="section-heading">Certifications</h2>
+            <div class="grid">
+                <div class="card"><img src="cloud.webp" onclick="openFull(this.src, 'img')"><h3>Cloud Computing</h3></div>
+                <div class="card"><img src="image.png" onclick="openFull(this.src, 'img')"><h3>Programming</h3></div>
+                <div class="card"><img src="2.jpg" onclick="openFull(this.src, 'img')"><h3>Honors Certificate</h3></div>
+                <div class="card"><img src="certi.webp" onclick="openFull(this.src, 'img')"><h3>Technical Workshop</h3></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="cv.pdf" class="download-btn">Download CV</a>
+        <div class="contact-section"><p>Contact Me: <a href="mailto:your-email@mitaoe.ac.in">your-email@mitaoe.ac.in</a></p></div>
+    </footer>
+
+    <div id="modal">
+        <span class="close-modal" onclick="closeFull()">&times;</span>
+        <div id="modal-content"></div>
     </div>
-</section>
 
-
-
-<section class="glass">
-    <h2>Languages Known</h2>
-
-    <div class="language-container">
-
-        <div class="language-card">
-            <h3>English</h3>
-            <audio controls>
-                <source src="english.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="language-card">
-            <h3>Hindi</h3>
-            <audio controls>
-                <source src="hindi.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="language-card">
-            <h3>Marathi</h3>
-            <audio controls>
-                <source src="marathi.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="language-card">
-            <h3>German</h3>
-            <audio controls>
-                <source src="german.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-    </div>
-</section>
-
-<section class="glass">
-    <h2>Hobbies</h2>
-
-    <div class="hobby-container">
-
-        <!-- Dancing -->
-        <div class="hobby-card">
-            <input type="checkbox" id="dance">
-            <label for="dance">Dancing</label>
-
-            <div class="video-box">
-                <video controls>
-                    <source src="dance.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-        <!-- Guitar -->
-        <div class="hobby-card">
-            <input type="checkbox" id="guitar">
-            <label for="guitar">Playing Guitar</label>
-
-            <div class="video-box">
-                <video controls>
-                    <source src="guitar.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-        <!-- Badminton -->
-        <div class="hobby-card">
-            <input type="checkbox" id="badminton">
-            <label for="badminton">Badminton</label>
-
-            <div class="video-box">
-                <video controls>
-                    <source src="badminton.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-        <!-- Trekking -->
-        <div class="hobby-card">
-            <input type="checkbox" id="trekking">
-            <label for="trekking">Trekking</label>
-
-            <div class="video-box">
-                <video controls>
-                    <source src="trekking.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-        <!-- Reading -->
-        <div class="hobby-card">
-            <input type="checkbox" id="reading">
-            <label for="reading">Reading Books</label>
-
-            <div class="video-box">
-                <video controls>
-                    <source src="reading.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="glass">
-    <h2>FAQ</h2>
-
-    <details>
-        <summary>What is your goal?</summary>
-        <p>To become a cloud professional.</p>
-    </details>
-
-    <details>
-        <summary>What technologies do you use?</summary>
-        <p>Python, Cloud, AI</p>
-    </details>
-    
-    <details>
-        <summary>which job role you aspire for?</summary>
-        <p>Python developer, Cloud architect, consulting</p>
-    </details>
-</section>
-
-<!-- CONTACT -->
-<section class="glass contact" id="contact">
-    <h2>Contact Me</h2>
-
-    <div class="contact-container">
-
-        <div class="contact-info">
-            <p><strong>Email:</strong> tanvipatil@example.com</p>
-            <p><strong>Location:</strong> Pune, India</p>
-
-            <div class="socials">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">Github</a>
-            </div>
-        </div>
-
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-
-    </div>
-</section>
-
-<!-- BACK TO TOP -->
-<a href="#top" class="btn">↑ Top</a>
-
-<footer>
-     <a href="resume.pdf" download class="btn">Download Resume</a>
-</footer>
-
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active-section'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active-section');
+            event.currentTarget.classList.add('active');
+        }
+        function openFull(src, type) {
+            const modal = document.getElementById('modal');
+            const content = document.getElementById('modal-content');
+            modal.style.display = 'flex';
+            content.innerHTML = type === 'img' ? `<img src="${src}">` : `<video controls autoplay src="${src}"></video>`;
+        }
+        function closeFull() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('modal-content').innerHTML = '';
+        }
+        window.onclick = function(event) { if (event.target == document.getElementById('modal')) closeFull(); }
+    </script>
 </body>
 </html>
